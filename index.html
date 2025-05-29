@@ -15,16 +15,179 @@
             color: white;
             font-family: 'Montserrat', sans-serif;
         }
+
+        .retro-window {
+            background: #c0c0c0;
+            border: 2px outset #c0c0c0;
+            box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            position: fixed;
+            z-index: 1000;
+            display: none;
+        }
+
+        .retro-window.top-right {
+            top: 80px;
+            right: 220px;
+            width: 400px;
+            max-width: calc(100vw - 160px);
+        }
+
+        .retro-window.bottom-left {
+            bottom: 100px;
+            left: 250px;
+            width: 300px;
+            max-width: calc(100vw - 160px);
+            max-height: calc(100vh - 160px);
+        }
+
+        .retro-titlebar {
+            background: linear-gradient(90deg, #000000 0%, #818181 100%);
+            color: white;
+            padding: 2px 4px;
+            font-size: 11px;
+            font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #808080;
+        }
+
+        .retro-close {
+            background: #c0c0c0;
+            border: 1px outset #c0c0c0;
+            width: 16px;
+            height: 14px;
+            font-size: 9px;
+            font-weight: bold;
+            color: black;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .retro-close:hover {
+            background: #e0e0e0;
+        }
+
+        .retro-close:active {
+            border: 1px inset #c0c0c0;
+        }
+
+        .retro-content {
+            padding: 8px;
+            background: #c0c0c0;
+            color: black;
+        }
+
+        .stream-list {
+            max-height: 300px;
+            overflow-y: auto;
+            font-size: 10px;
+        }
+
+        .stream-item {
+            padding: 4px 0;
+            border-bottom: 1px solid #808080;
+        }
+
+        .stream-item:last-child {
+            border-bottom: none;
+        }
+
+        .stream-link {
+            color: #0000ee;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .stream-link:hover {
+            color: #ff0000;
+        }
+
+        .stream-link:visited {
+            color: #800080;
+        }
+
+        .stream-list::-webkit-scrollbar {
+            width: 16px;
+        }
+
+        .stream-list::-webkit-scrollbar-track {
+            background: #c0c0c0;
+            border: 1px inset #c0c0c0;
+        }
+
+        .stream-list::-webkit-scrollbar-thumb {
+            background: #808080;
+            border: 1px outset #808080;
+        }
+
+        .stream-list::-webkit-scrollbar-thumb:hover {
+            background: #606060;
+        }
     </style>
 </head>
 <body>
+    <div class="retro-window top-right" id="videoPopup">
+        <div class="retro-titlebar">
+            <span>STUDY TAPE</span>
+            <div class="retro-close" onclick="closeVideoPopup()">×</div>
+        </div>
+        <div class="retro-content">
+            <iframe 
+                width="100%" 
+                height="225" 
+                src="https://www.youtube.com/" 
+                title="YouTube Live Stream" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    <div class="retro-window bottom-left" id="streamsPopup">
+        <div class="retro-titlebar">
+            <span>PAST TAPES</span>
+            <div class="retro-close" onclick="closeStreamsPopup()">×</div>
+        </div>
+        <div class="retro-content">
+            <div class="stream-list">
+                <!-- <div class="stream-item">
+                    <a href="https://www.youtube.com/watch?v=DZOcjufBbzY" target="_blank" class="stream-link">Data Science Fundamentals - Part 1</a>
+                </div>
+                <div class="stream-item">
+                    <a href="https://www.youtube.com/watch?v=example1" target="_blank" class="stream-link">Machine Learning Basics Live Session</a>
+                </div>
+                <div class="stream-item">
+                    <a href="https://www.youtube.com/watch?v=example2" target="_blank" class="stream-link">Python Programming Tutorial</a>
+                </div>
+                <div class="stream-item">
+                    <a href="https://www.youtube.com/watch?v=example3" target="_blank" class="stream-link">Deep Learning Workshop</a>
+                </div>
+                <div class="stream-item">
+                    <a href="https://www.youtube.com/watch?v=example4" target="_blank" class="stream-link">Statistics for Data Science</a>
+                </div>
+                <div class="stream-item">
+                    <a href="https://www.youtube.com/watch?v=example5" target="_blank" class="stream-link">SQL Database Management</a>
+                </div>
+                <div class="stream-item">
+                    <a href="https://www.youtube.com/watch?v=example6" target="_blank" class="stream-link">Data Visualization with Python</a>
+                </div>
+                <div class="stream-item">
+                    <a href="https://www.youtube.com/watch?v=example7" target="_blank" class="stream-link">AI Ethics Discussion</a>
+                </div> -->
+            </div>
+        </div>
+    </div>
+
     <div class="min-h-screen flex flex-col items-center justify-center text-center p-4">
         <h1 class="text-3xl font-semibold">Harvest Walukow</h1>
         <p class="text-xs mb-8 font-regular">Data Science @ Airlangga University</p>
         
         <div class="mb-10">
-            <img src="asset/profile.png" alt="Harvest Walukow" class="size-40
-            ">
+            <img src="asset/profile.png" alt="Harvest Walukow" class="size-40">
         </div>
 
         <div class="flex items-center justify-center">
@@ -39,5 +202,27 @@
             </a>
         </div>
     </div>
+
+    <script>
+        function closeVideoPopup() {
+            document.getElementById('videoPopup').style.display = 'none';
+        }
+
+        function closeStreamsPopup() {
+            document.getElementById('streamsPopup').style.display = 'none';
+        }
+
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeVideoPopup();
+                closeStreamsPopup();
+            }
+        });
+
+        window.addEventListener('load', function() {
+            document.getElementById('videoPopup').style.display = 'block';
+            document.getElementById('streamsPopup').style.display = 'block';
+        });
+    </script>
 </body>
 </html>
