@@ -1,213 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
     <title>HI!</title>
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22white%22/></svg>">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 fill=%22white%22/></svg>"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        body {
-            background-color: black;
-            color: white;
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        .retro-window {
-            background: #c0c0c0;
-            border: 2px outset #c0c0c0;
-            box-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-            position: fixed;
-            z-index: 1000;
-            display: none;
-        }
-
-        .retro-window.top-right {
-            top: 80px;
-            right: 220px;
-            width: 400px;
-            max-width: calc(100vw - 160px);
-        }
-
-        .retro-window.bottom-left {
-            bottom: 100px;
-            left: 250px;
-            width: 300px;
-            max-width: calc(100vw - 160px);
-            max-height: calc(100vh - 160px);
-        }
-
-        .retro-titlebar {
-            background: linear-gradient(90deg, #000000 0%, #818181 100%);
-            color: white;
-            padding: 2px 4px;
-            font-size: 11px;
-            font-weight: bold;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid #808080;
-        }
-
-        .retro-close {
-            background: #c0c0c0;
-            border: 1px outset #c0c0c0;
-            width: 16px;
-            height: 14px;
-            font-size: 9px;
-            font-weight: bold;
-            color: black;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .retro-close:hover {
-            background: #e0e0e0;
-        }
-
-        .retro-close:active {
-            border: 1px inset #c0c0c0;
-        }
-
-        .retro-content {
-            padding: 8px;
-            background: #c0c0c0;
-            color: black;
-        }
-
-        .stream-list {
-            max-height: 300px;
-            overflow-y: auto;
-            font-size: 10px;
-        }
-
-        .stream-item {
-            padding: 4px 0;
-            border-bottom: 1px solid #808080;
-        }
-
-        .stream-item:last-child {
-            border-bottom: none;
-        }
-
-        .stream-link {
-            color: #0000ee;
-            text-decoration: underline;
-            cursor: pointer;
-        }
-
-        .stream-link:hover {
-            color: #ff0000;
-        }
-
-        .stream-link:visited {
-            color: #800080;
-        }
-
-        .stream-list::-webkit-scrollbar {
-            width: 16px;
-        }
-
-        .stream-list::-webkit-scrollbar-track {
-            background: #c0c0c0;
-            border: 1px inset #c0c0c0;
-        }
-
-        .stream-list::-webkit-scrollbar-thumb {
-            background: #808080;
-            border: 1px outset #808080;
-        }
-
-        .stream-list::-webkit-scrollbar-thumb:hover {
-            background: #606060;
-        }
+      body {
+        background-color: black;
+        color: white;
+        font-family: "Montserrat", sans-serif;
+      }
     </style>
-</head>
-<body>
-    <div class="retro-window top-right" id="videoPopup">
-        <div class="retro-titlebar">
-            <span>GRIND TAPE</span>
-            <div class="retro-close" onclick="closeVideoPopup()">×</div>
-        </div>
-        <div class="retro-content">
-            <iframe 
-                width="100%" 
-                height="225" 
-                src="https://www.youtube.com/embed/gmp8MTSRWIw" 
-                title="YouTube Live Stream" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
-            </iframe>
-        </div>
+  </head>
+  <body>
+    <div
+      class="min-h-screen flex flex-col items-center justify-center text-center p-4"
+    >
+      <h1 class="text-3xl font-semibold">Harvest Walukow</h1>
+      <p class="text-xs mb-8 font-regular">
+        Data Science @ Airlangga University
+      </p>
+
+      <div class="mb-10">
+        <img src="asset/profile.png" alt="Harvest Walukow" class="size-40" />
+      </div>
+
+      <div class="flex items-center justify-center">
+        <a
+          href="https://www.linkedin.com/in/harvestwalukow/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mx-3"
+        >
+          <img src="asset/Linkedin.png" alt="LinkedIn" class="size-7" />
+        </a>
+        <a
+          href="https://www.youtube.com/@harvestwalukow"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mx-3"
+        >
+          <img src="asset/Youtube.png" alt="YouTube" class="size-7" />
+        </a>
+        <a
+          href="https://github.com/harvestwalukow"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mx-3"
+        >
+          <img src="asset/Github.png" alt="GitHub" class="size-7" />
+        </a>
+      </div>
     </div>
 
-    <div class="retro-window bottom-left" id="streamsPopup">
-        <div class="retro-titlebar">
-            <span>PAST TAPES</span>
-            <div class="retro-close" onclick="closeStreamsPopup()">×</div>
-        </div>
-        <div class="retro-content">
-            <div class="stream-list">
-                <div class="stream-item">
-                    <a href="https://youtube.com/live/qm64CqB6L-A?feature=share" target="_blank" class="stream-link">finals prep | statistika matematika pt. 3</a>
-                </div>
-                <div class="stream-item">
-                    <a href="https://youtube.com/live/MgVFKhk4Egc?feature=share" target="_blank" class="stream-link">finals prep | statistika matematika pt. 2</a>
-                </div>
-                <div class="stream-item">
-                    <a href="https://youtube.com/live/FLtEXjZaW-A?feature=share target="_blank" class="stream-link">finals prep | statistika matematika</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="min-h-screen flex flex-col items-center justify-center text-center p-4">
-        <h1 class="text-3xl font-semibold">Harvest Walukow</h1>
-        <p class="text-xs mb-8 font-regular">Data Science @ Airlangga University</p>
-        
-        <div class="mb-10">
-            <img src="asset/profile.png" alt="Harvest Walukow" class="size-40">
-        </div>
-
-        <div class="flex items-center justify-center">
-            <a href="https://www.linkedin.com/in/harvestwalukow/" target="_blank" rel="noopener noreferrer" class="mx-3">
-                <img src="asset/Linkedin.png" alt="LinkedIn" class="size-7">
-            </a>
-            <a href="https://www.youtube.com/@harvestwalukow" target="_blank" rel="noopener noreferrer" class="mx-3">
-                <img src="asset/Youtube.png" alt="YouTube" class="size-7">
-            </a>
-            <a href="https://github.com/harvestwalukow" target="_blank" rel="noopener noreferrer" class="mx-3">
-                <img src="asset/Github.png" alt="GitHub" class="size-7">
-            </a>
-        </div>
-    </div>
-
-    <script>
-        function closeVideoPopup() {
-            document.getElementById('videoPopup').style.display = 'none';
-        }
-
-        function closeStreamsPopup() {
-            document.getElementById('streamsPopup').style.display = 'none';
-        }
-
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'Escape') {
-                closeVideoPopup();
-                closeStreamsPopup();
-            }
-        });
-
-        window.addEventListener('load', function() {
-            document.getElementById('videoPopup').style.display = 'block';
-            document.getElementById('streamsPopup').style.display = 'block';
-        });
-    </script>
-</body>
+    <script></script>
+  </body>
 </html>
