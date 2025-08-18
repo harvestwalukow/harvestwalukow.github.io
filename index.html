@@ -32,7 +32,6 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        cursor: none;
       }
 
       body {
@@ -51,28 +50,7 @@
         font-family: "Inter", sans-serif;
       }
 
-      /* Custom Cursor */
-      .cursor {
-        position: fixed;
-        width: var(--cursor-size);
-        height: var(--cursor-size);
-        background: rgba(255, 255, 255, 0.8);
-        border-radius: 50%;
-        pointer-events: none;
-        z-index: 9999;
-        mix-blend-mode: difference;
-        transition: all 0.15s ease;
-        transform: translate(-50%, -50%);
-      }
 
-      .cursor.hover {
-        transform: translate(-50%, -50%) scale(2);
-        background: rgba(255, 255, 255, 0.4);
-      }
-
-      .cursor.click {
-        transform: translate(-50%, -50%) scale(0.5);
-      }
 
       /* Noise background */
       .noise-bg {
@@ -327,7 +305,7 @@
         transition: all 0.5s ease;
         position: relative;
         overflow: hidden;
-        cursor: none;
+
       }
 
       .project-experimental::before {
@@ -581,7 +559,7 @@
     </style>
   </head>
   <body>
-    <div class="cursor" id="cursor"></div>
+
     <div class="noise-bg"></div>
 
     <!-- Experimental Navigation -->
@@ -872,46 +850,7 @@
     </section>
 
     <script>
-      // Custom cursor
-      const cursor = document.getElementById("cursor");
-      let mouseX = 0,
-        mouseY = 0;
-      let cursorX = 0,
-        cursorY = 0;
 
-      document.addEventListener("mousemove", (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-      });
-
-      function updateCursor() {
-        const dx = mouseX - cursorX;
-        const dy = mouseY - cursorY;
-        cursorX += dx * 0.8;
-        cursorY += dy * 0.8;
-        cursor.style.left = cursorX + "px";
-        cursor.style.top = cursorY + "px";
-        requestAnimationFrame(updateCursor);
-      }
-      updateCursor();
-
-      // Cursor interactions
-      document.addEventListener("mousedown", () => {
-        cursor.classList.add("click");
-      });
-
-      document.addEventListener("mouseup", () => {
-        cursor.classList.remove("click");
-      });
-
-      document.querySelectorAll(".hoverable, .nav-link-exp").forEach((el) => {
-        el.addEventListener("mouseenter", () => {
-          cursor.classList.add("hover");
-        });
-        el.addEventListener("mouseleave", () => {
-          cursor.classList.remove("hover");
-        });
-      });
 
       // Navbar hide/show
       let lastScrollY = window.scrollY;
