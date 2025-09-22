@@ -215,9 +215,7 @@
 
         try {
           // Load the markdown file
-          const response = await fetch(
-            "mengapa-kampus-perlu-mengadopsi-platform-review.md"
-          );
+          const response = await fetch("20.md");
           if (!response.ok) {
             throw new Error("Failed to load markdown file");
           }
@@ -241,7 +239,7 @@
           const postHTML = `
             <article class="post">
               ${title ? `<h1 class="post-title">${title}</h1>` : ""}
-              <div class="post-meta">August 2025 -  Harvest Walukow</div>
+              <div class="post-meta">23 September 2025 -  1:01 AM </div>
               <div class="post-content">${htmlContent}</div>
             </article>
           `;
