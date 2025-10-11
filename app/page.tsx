@@ -107,7 +107,7 @@ export default function Home() {
 
       <section className="mt-10">
         <h2 className="text-xs font-semibold tracking-widest text-gray-500 uppercase">
-          Selected Work
+          Featured Work
         </h2>
         <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="border border-gray-800 rounded-lg p-6 hover:border-gray-700 transition-colors flex flex-col">
@@ -173,23 +173,15 @@ export default function Home() {
               View on GitHub
             </a>
           </div>
+        </div>
 
-          <div className="border border-gray-800 rounded-lg p-6 hover:border-gray-700 transition-colors flex flex-col">
-            <h3 className="text-lg font-semibold text-white">
-              The Math Ain&rsquo;t Mathing
-            </h3>
-            <p className="text-gray-400 text-sm mt-2 flex-grow">
-              An R package.
-            </p>
-            <a
-              href="https://github.com/harvestwalukow/mathaintmathing"
-              target="_blank"
-              rel="noopener"
-              className="inline-block mt-4 px-4 py-2 bg-white text-black rounded-md hover:bg-gray-200 transition-colors text-sm font-medium text-center"
-            >
-              View on GitHub
-            </a>
-          </div>
+        <div className="mt-6 text-center">
+          <Link
+            href="/projects"
+            className="text-white hover:text-gray-400 underline underline-offset-4 transition-colors"
+          >
+            See all projects
+          </Link>
         </div>
       </section>
     </div>
