@@ -127,6 +127,39 @@ export default function Home() {
           </div>
 
           <div className="border border-gray-800 rounded-lg p-6 hover:border-gray-700 transition-colors flex flex-col">
+            <h3 className="text-lg font-semibold text-white">Kampzy</h3>
+            <p className="text-gray-400 text-sm mt-2 flex-grow">
+              Building the go-to hub for student communities.
+            </p>
+            <a
+              href="https://kampzy.com"
+              target="_blank"
+              rel="noopener"
+              className="inline-block mt-4 px-4 py-2 bg-white text-black rounded-md hover:bg-gray-200 transition-colors text-sm font-medium text-center"
+            >
+              Visit project
+            </a>
+          </div>
+
+          <div className="border border-gray-800 rounded-lg p-6 hover:border-gray-700 transition-colors flex flex-col">
+            <h3 className="text-lg font-semibold text-white">
+              GPT From Scratch
+            </h3>
+            <p className="text-gray-400 text-sm mt-2 flex-grow">
+              Building my own GPT based on the famous paper Attention Is All You
+              Need.
+            </p>
+            <a
+              href="https://harvestwalukow.github.io/gpt/"
+              target="_blank"
+              rel="noopener"
+              className="inline-block mt-4 px-4 py-2 bg-white text-black rounded-md hover:bg-gray-200 transition-colors text-sm font-medium text-center"
+            >
+              View project
+            </a>
+          </div>
+
+          <div className="border border-gray-800 rounded-lg p-6 hover:border-gray-700 transition-colors flex flex-col">
             <h3 className="text-lg font-semibold text-white">Apple Music DB</h3>
             <p className="text-gray-400 text-sm mt-2 flex-grow">
               Relational database modeling.
@@ -155,21 +188,6 @@ export default function Home() {
               className="inline-block mt-4 px-4 py-2 bg-white text-black rounded-md hover:bg-gray-200 transition-colors text-sm font-medium text-center"
             >
               View on GitHub
-            </a>
-          </div>
-
-          <div className="border border-gray-800 rounded-lg p-6 hover:border-gray-700 transition-colors flex flex-col">
-            <h3 className="text-lg font-semibold text-white">Kampzy</h3>
-            <p className="text-gray-400 text-sm mt-2 flex-grow">
-              Building the go-to hub for student communities.
-            </p>
-            <a
-              href="https://kampzy.com"
-              target="_blank"
-              rel="noopener"
-              className="inline-block mt-4 px-4 py-2 bg-white text-black rounded-md hover:bg-gray-200 transition-colors text-sm font-medium text-center"
-            >
-              Visit project
             </a>
           </div>
         </div>
