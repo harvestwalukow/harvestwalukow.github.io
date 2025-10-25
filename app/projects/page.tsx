@@ -14,7 +14,7 @@ const projects = [
   {
     title: "Kampzy",
     description: "Building the go-to hub for student communities.",
-    url: "https://kampzy.com",
+    url: "https://www.kampzy.com",
     category: "web/app",
   },
   {

@@ -132,7 +132,7 @@ export default function Home() {
               Building the go-to hub for student communities.
             </p>
             <a
-              href="https://kampzy.up.railway.app/"
+              href="https://www.kampzy.com"
               target="_blank"
               rel="noopener"
               className="inline-block mt-4 px-4 py-2 bg-white text-black rounded-md hover:bg-gray-200 transition-colors text-sm font-medium text-center"
