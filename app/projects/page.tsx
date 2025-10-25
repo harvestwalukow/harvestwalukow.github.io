@@ -58,6 +58,11 @@ const projects = [
     url: "https://sidisoda.vercel.app",
   },
   {
+    title: "Life Expectancy Regression Analysis",
+    description: "A group project using R and Shiny App.",
+    url: "https://harvestwalukow.shinyapps.io/Kelompok5/",
+  },
+  {
     title: "search",
     description: "iTunes Search with Python.",
     url: "https://github.com/harvestwalukow/search",
