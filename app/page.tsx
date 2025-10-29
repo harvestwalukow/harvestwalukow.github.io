@@ -2,7 +2,17 @@
 
 import Link from "next/link";
 import { Mail, Linkedin, Github, Youtube, Calendar } from "lucide-react";
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import {
+  Dialog,
+  DialogContent,
+  DialogTrigger,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+  DialogFooter,
+  DialogClose,
+} from "@/components/ui/dialog";
+import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
@@ -83,12 +93,29 @@ export default function Home() {
               View portfolio
             </button>
           </DialogTrigger>
-          <DialogContent className="p-0 border-0 max-w-none w-screen h-screen">
-            <iframe
-              className="w-full h-full"
-              src="https://embed.figma.com/proto/DbsZa4L2rH02Y2Zcdur7lI/Graphic-Design-Portfolio?node-id=2-2&p=f&scaling=contain&content-scaling=fixed&page-id=0%3A1&embed-host=share"
-              allowFullScreen
-            />
+          <DialogContent>
+            <DialogHeader>
+              <DialogTitle>Open portfolio on Figma</DialogTitle>
+              <DialogDescription>
+                You’ll be redirected to a Figma prototype in a new tab.
+              </DialogDescription>
+            </DialogHeader>
+            <DialogFooter>
+              <DialogClose asChild>
+                <Button variant="ghost" className="w-full sm:w-auto">
+                  Cancel
+                </Button>
+              </DialogClose>
+              <DialogClose asChild>
+                <a
+                  href="https://www.figma.com/proto/DbsZa4L2rH02Y2Zcdur7lI/Graphic-Design-Portfolio?node-id=2-2&p=f&t=cpcjzbVdWXX57Grs-1&scaling=contain&content-scaling=fixed&page-id=0%3A1"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <Button className="w-full sm:w-auto">Continue</Button>
+                </a>
+              </DialogClose>
+            </DialogFooter>
           </DialogContent>
         </Dialog>
       </section>
