@@ -15,15 +15,17 @@ export function getSortedPostsData() {
     const matterResult = matter(fileContents);
     return {
       id,
-      ...(matterResult.data as { date: string; title: string }),
+      ...(matterResult.data as { date: string; title: string; pinned?: boolean }),
     };
   });
   return allPostsData.sort((a, b) => {
-    if (a.date < b.date) {
-      return 1;
-    } else {
-      return -1;
+    const aPinned = Boolean((a as { pinned?: boolean }).pinned);
+    const bPinned = Boolean((b as { pinned?: boolean }).pinned);
+    if (aPinned !== bPinned) {
+      return aPinned ? -1 : 1; // pinned first
     }
+    // Then sort by date desc
+    return a.date < b.date ? 1 : -1;
   });
 }
 
@@ -38,7 +40,7 @@ export async function getPostData(id: string) {
   return {
     id,
     contentHtml,
-    ...(matterResult.data as { date: string; title: string }),
+    ...(matterResult.data as { date: string; title: string; pinned?: boolean }),
   };
 }
 

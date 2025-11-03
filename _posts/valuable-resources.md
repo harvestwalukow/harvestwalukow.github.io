@@ -1,5 +1,5 @@
 ---
-title: "Some Good Things on The Internet"
+title: "Cool Things on The Internet"
 date: "2025-11-03"
 ---
 
