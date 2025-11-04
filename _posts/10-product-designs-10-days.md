@@ -18,10 +18,32 @@ Starting this challenge by revamping my personal pomodoro app. You can use it to
 
 ## Day 2: Government Money Tracker
 
-![Pomodoro App Design](/10design/2.png)
+![Government Money Tracker](/10design/2.png)
 
 🔗 [Figma](https://www.figma.com/design/3wwl271z4SPFxYXSYdQBdN/Government-Money-Tracker?node-id=0-1&t=jyk79hzWObbN9qLg-1)
 
 🔗 [X](https://x.com/harvestwalukow/status/1985095880761037134?s=46)
 
-Pulling an all-nighter for this one. Got some inspiration from doge-tracker.com, trumpcard.gov, perplexity.ai/discover, and a bit from cluely.com. Disclaimer: the math isn’t quite adding up in this design, and the chart is a perfect example of 'How to Lie with Statistics.' I’ll definitely improve this design later.
+Pulling an all-nighter for this one. Got some inspiration from doge-tracker.com, trumpcard.gov, perplexity.ai/discover, and a bit from cluely.com. Disclaimer: the math isn’t quite adding up in this design, and the chart is a perfect example of 'How to Lie with Statistics.'
+
+## Day 3: All Your Socials in 1 App
+
+![Super Social App](/10design/3.png)
+
+🔗 [Figma](https://www.figma.com/design/rwQEiOQjzyLxmMzpo890aL/Super-Social-App?node-id=0-1&t=O0FVZgIDdxCyvCE9-1)
+
+🔗 [X](https://x.com/HarvestWalukow/status/1985766119261741078)
+
+Sometimes it feel like we have too many social networking platforms. So what if there were an app that lets you gather all the content from your social media, like Instagram, X, LinkedIn, Snapchat, and others, and scroll through them all in one place?
+
+The idea’s better than the execution (for now) . I’ll definitely revisit this later.
+
+## Day 4: Google Colab
+
+![Super Social App](/10design/4.png)
+
+🔗 [Figma](https://www.figma.com/design/gCFm5XtNJmVhlRNdDqba2S/Google-Colab?node-id=0-1&t=Akm149lDQZYPGpx8-1)
+
+🔗 [X](https://x.com/HarvestWalukow/status/1985766240129069097)
+
+I’ve always believed Google is just one great UI/UX design away from leading the AI race.
