@@ -40,10 +40,20 @@ The idea’s better than the execution (for now) . I’ll definitely revisit thi
 
 ## Day 4: Google Colab
 
-![Super Social App](/10design/4.png)
+![Google Colab](/10design/4.png)
 
 🔗 [Figma](https://www.figma.com/design/gCFm5XtNJmVhlRNdDqba2S/Google-Colab?node-id=0-1&t=Akm149lDQZYPGpx8-1)
 
 🔗 [X](https://x.com/HarvestWalukow/status/1985766240129069097)
 
 I’ve always believed Google is just one great UI/UX design away from leading the AI race.
+
+## Day 5: 10,000 Hours Leaderboard
+
+![10000](/10design/5.png)
+
+🔗 [Figma](https://www.figma.com/design/W2IDGG2tVqC1wHHG8QMuD0/10000-Hours-Leaderboard?node-id=0-1&t=ln4HbI10c5LMtZB0-1)
+
+🔗 [X](https://x.com/HarvestWalukow/status/1986108386166120680)
+
+Had an idea to make an app where people can track how many hours they work on something to reach the 10,000 hours goal, a concept from Malcolm Gladwell's Outliers.
