@@ -5,7 +5,7 @@ date: "2025-11-03"
 
 [0-th](https://0-th.com)
 
-[Fizz](https://joinfizz.com/
+[Fizz](https://joinfizz.com)
 
 [Arman's AIML Roadmap](https://github.com/armankhondker/awesome-ai-ml-resources)
 
@@ -16,3 +16,5 @@ date: "2025-11-03"
 [Virgil's Free Game](https://free---game.com)
 
 [Extraordinary.com](https://extraordinary.com/directory)
+
+[Wonder](https://www.wander.com/)
