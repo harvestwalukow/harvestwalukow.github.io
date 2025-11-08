@@ -57,3 +57,13 @@ I’ve always believed Google is just one great UI/UX design away from leading t
 🔗 [X](https://x.com/HarvestWalukow/status/1986108386166120680)
 
 Had an idea to make an app where people can track how many hours they work on something to reach the 10,000 hours goal, a concept from Malcolm Gladwell's Outliers.
+
+## Day 6: Brawn GP F1 App
+
+![Brawn GP](/10design/6.png)
+
+🔗 [Figma](https://www.figma.com/design/Blb8vDGwTb4Z0O7MzBdqjv/Brawn-GP?node-id=0-1&t=5cRkXUksLmHKqc8S-1)
+
+🔗 [X](https://x.com/harvestwalukow/status/1987018717386166326?s=46)
+
+Revisiting my old [personal project](https://www.behance.net/gallery/125780041/Brawn-GP-Logo-Livery-Redesign), which I made when I was 15.
