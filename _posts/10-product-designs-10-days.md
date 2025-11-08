@@ -67,3 +67,12 @@ Had an idea to make an app where people can track how many hours they work on so
 🔗 [X](https://x.com/harvestwalukow/status/1987018717386166326?s=46)
 
 Revisiting my old [personal project](https://www.behance.net/gallery/125780041/Brawn-GP-Logo-Livery-Redesign), which I made when I was 15.
+
+## Day 7: YZY MNY Landing Page
+
+![YZY](/10design/7.gif)
+
+🔗 [Figma](https://www.figma.com/design/R8inVfqqL0VtvKM7nA3xBb/YZY-MNY?node-id=0-1&t=A5JTokvbr7NW0R1j-1)
+🔗 [X](https://x.com/harvestwalukow/status/1987139503618916664?s=46)
+
+Landing page redesign on money.yeezy.com.
