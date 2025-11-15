@@ -87,3 +87,13 @@ Landing page redesign on money.yeezy.com.
 🔗 [X](https://x.com/harvestwalukow/status/1989571537519906959?s=46)
 
 Got caught up with classes and a bunch of other things. After almost a week away, I’m finally back working on this challenge, this time with a news app. Two designs left and I'm hoping to wrap everything up this weekend.
+
+## Day 9: Lichess
+
+![YZY](/10design/9.png)
+
+🔗 [Figma](https://www.figma.com/design/un99HdBlz4iTuFbQHE4o5r/Lichess?node-id=0-1&t=8xrn6w8O6nPtCt6N-1)
+
+🔗 [X](https://x.com/HarvestWalukow/status/1989651374095929707?s=20)
+
+I came up with this idea after participating in a chess tournament last week. I wanted to make Lichess look more modern and minimalist.
