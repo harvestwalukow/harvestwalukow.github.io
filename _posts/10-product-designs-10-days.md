@@ -77,3 +77,13 @@ Revisiting my old [personal project](https://www.behance.net/gallery/125780041/B
 🔗 [X](https://x.com/harvestwalukow/status/1987139503618916664?s=46)
 
 Landing page redesign on money.yeezy.com.
+
+## Day 8: News App
+
+![YZY](/10design/8.png)
+
+🔗 [Figma](https://www.figma.com/design/zumOFznNOX07RnK94B0Py6/News-App?node-id=0-1&t=N8CWX3MDA2ULUSvR-1)
+
+🔗 [X](https://x.com/harvestwalukow/status/1989571537519906959?s=46)
+
+Got caught up with classes and a bunch of other things. After almost a week away, I’m finally back working on this challenge, this time with a news app. Two designs left and I'm hoping to wrap everything up this weekend.
