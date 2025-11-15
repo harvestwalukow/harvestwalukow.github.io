@@ -73,6 +73,7 @@ Revisiting my old [personal project](https://www.behance.net/gallery/125780041/B
 ![YZY](/10design/7.gif)
 
 🔗 [Figma](https://www.figma.com/design/R8inVfqqL0VtvKM7nA3xBb/YZY-MNY?node-id=0-1&t=A5JTokvbr7NW0R1j-1)
+
 🔗 [X](https://x.com/harvestwalukow/status/1987139503618916664?s=46)
 
 Landing page redesign on money.yeezy.com.

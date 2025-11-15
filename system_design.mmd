@@ -1,0 +1,81 @@
+graph TB
+    %% User Events Layer
+    App[App Events]
+    Chat[Chat Events]
+    Review[Review Events]
+    
+    %% API Layer - Write
+    SubmitAPI["/feedback/submit<br/>POST<br/>(user_id, event_id, text, sentiment)"]
+    TriggerAPI["/event/trigger<br/>POST<br/>(triggers AI tagging pipeline)"]
+    
+    %% API Layer - Read
+    InsightsAPI["/insights/top<br/>GET<br/>(top user pain points)"]
+    DashboardAPI["/dashboard/summary<br/>GET<br/>(aggregated trend data)"]
+    
+    %% Ingestion Layer
+    Kafka[Kafka / PubSub<br/>Event Stream]
+    
+    %% Processing Layer
+    TextClean[Text Cleaning]
+    NLPEmbed[NLP Embedding]
+    Sentiment[Sentiment Classification]
+    Clustering[Clustering<br/>K-Means / DBSCAN]
+    Summarization[LLM Summarization]
+    Prioritization[Prioritization<br/>Confidence + Volume Scoring]
+    
+    %% Storage Layer
+    Postgres[(PostgreSQL<br/>feedback_table<br/>insight_table)]
+    Redis[(Redis<br/>Cache)]
+    Elastic[(Elasticsearch<br/>Search)]
+    
+    %% Dashboard
+    Dashboard[OALAH Dashboard]
+    
+    %% Data Flow - Write Path
+    App --> SubmitAPI
+    Chat --> SubmitAPI
+    Review --> SubmitAPI
+    
+    SubmitAPI --> Kafka
+    TriggerAPI --> Kafka
+    
+    Kafka --> TextClean
+    TextClean --> NLPEmbed
+    NLPEmbed --> Sentiment
+    Sentiment --> Clustering
+    Clustering --> Summarization
+    Summarization --> Prioritization
+    
+    Prioritization --> Postgres
+    Prioritization --> Redis
+    Prioritization --> Elastic
+    
+    %% Data Flow - Read Path
+    Postgres --> InsightsAPI
+    Postgres --> DashboardAPI
+    Redis --> InsightsAPI
+    Redis --> DashboardAPI
+    Elastic --> InsightsAPI
+    Elastic --> DashboardAPI
+    
+    InsightsAPI --> Dashboard
+    DashboardAPI --> Dashboard
+    
+    %% Styling
+    classDef apiWrite fill:#e1f5ff,stroke:#01579b,stroke-width:2px
+    classDef apiRead fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
+    classDef processing fill:#fff3e0,stroke:#e65100,stroke-width:2px
+    classDef storage fill:#e8f5e9,stroke:#1b5e20,stroke-width:2px
+    classDef event fill:#fce4ec,stroke:#880e4f,stroke-width:2px
+    classDef dashboard fill:#fff9c4,stroke:#f57f17,stroke-width:2px
+    
+    class SubmitAPI,TriggerAPI apiWrite
+    class InsightsAPI,DashboardAPI apiRead
+    class TextClean,NLPEmbed,Sentiment,Clustering,Summarization,Prioritization processing
+    class Postgres,Redis,Elastic storage
+    class App,Chat,Review event
+    class Dashboard dashboard
+
+
+
+
