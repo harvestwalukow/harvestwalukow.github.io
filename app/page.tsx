@@ -13,6 +13,17 @@ import {
   DialogClose,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
+import {
+  SiPython,
+  SiReact,
+  SiOpenai,
+  SiNextdotjs,
+  SiTypescript,
+  SiPytorch,
+  SiSqlite,
+  SiMysql,
+  SiGo,
+} from "react-icons/si";
 
 export default function Home() {
   return (
@@ -143,6 +154,16 @@ export default function Home() {
               AI chatbot answering questions about the Mahaghora Scholarship
               program.
             </p>
+            <div className="flex gap-2 mt-3 flex-wrap">
+              <div className="tooltip-wrapper">
+                <SiPython className="h-5 w-5 text-gray-400 hover:text-white transition-colors cursor-pointer" />
+                <span className="tooltip">Python</span>
+              </div>
+              <div className="tooltip-wrapper">
+                <SiReact className="h-5 w-5 text-gray-400 hover:text-white transition-colors cursor-pointer" />
+                <span className="tooltip">React</span>
+              </div>
+            </div>
             <a
               href="https://tanya.beasiswamahaghora.com"
               target="_blank"
@@ -158,6 +179,16 @@ export default function Home() {
             <p className="text-gray-400 text-sm mt-2 flex-grow">
               Building the go-to hub for student communities.
             </p>
+            <div className="flex gap-2 mt-3 flex-wrap">
+              <div className="tooltip-wrapper">
+                <SiGo className="h-5 w-5 text-gray-400 hover:text-white transition-colors cursor-pointer" />
+                <span className="tooltip">Go</span>
+              </div>
+              <div className="tooltip-wrapper">
+                <SiMysql className="h-5 w-5 text-gray-400 hover:text-white transition-colors cursor-pointer" />
+                <span className="tooltip">MySQL</span>
+              </div>
+            </div>
             <a
               href="https://www.kampzy.com"
               target="_blank"
@@ -176,6 +207,16 @@ export default function Home() {
               Building my own GPT based on the famous paper Attention Is All You
               Need.
             </p>
+            <div className="flex gap-2 mt-3 flex-wrap">
+              <div className="tooltip-wrapper">
+                <SiPython className="h-5 w-5 text-gray-400 hover:text-white transition-colors cursor-pointer" />
+                <span className="tooltip">Python</span>
+              </div>
+              <div className="tooltip-wrapper">
+                <SiPytorch className="h-5 w-5 text-gray-400 hover:text-white transition-colors cursor-pointer" />
+                <span className="tooltip">PyTorch</span>
+              </div>
+            </div>
             <a
               href="https://harvestwalukow.github.io/gpt/"
               target="_blank"
@@ -191,6 +232,12 @@ export default function Home() {
             <p className="text-gray-400 text-sm mt-2 flex-grow">
               Relational database modeling.
             </p>
+            <div className="flex gap-2 mt-3 flex-wrap">
+              <div className="tooltip-wrapper">
+                <SiSqlite className="h-5 w-5 text-gray-400 hover:text-white transition-colors cursor-pointer" />
+                <span className="tooltip">SQL</span>
+              </div>
+            </div>
             <a
               href="https://github.com/harvestwalukow/apple-music"
               target="_blank"
