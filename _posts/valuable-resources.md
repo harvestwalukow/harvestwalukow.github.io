@@ -17,4 +17,4 @@ date: "2025-11-03"
 
 [Extraordinary.com](https://extraordinary.com/directory)
 
-[Wonder](https://www.wander.com/)
+[Wander](https://www.wander.com/)
