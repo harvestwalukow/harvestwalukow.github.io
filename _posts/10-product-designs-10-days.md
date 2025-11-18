@@ -97,3 +97,21 @@ Got caught up with classes and a bunch of other things. After almost a week away
 🔗 [X](https://x.com/HarvestWalukow/status/1989651374095929707?s=20)
 
 I came up with this idea after participating in a chess tournament last week. I wanted to make Lichess look more modern and minimalist.
+
+## Day 10: Crypto App
+
+![YZY](/10design/10.png)
+
+🔗 [Figma](https://www.figma.com/design/Kf6oVvXmgx8CJlMZppYQq8/Crypto-App?node-id=0-1&t=gVwpQf9tZFfPs7Hx-1)
+
+🔗 [X](https://x.com/HarvestWalukow/status/1990834184319877609?s=20)
+
+Experimented with the classic black and white color combo for a Crypto App. Went back and forth between Moonshot and Indodax for reference.
+
+---
+
+#### Takeaway
+
+Doing 1 design per day is actually manageable when you stick to 1-3 screens (and skip user research, prototyping, and the other fancy UIUX steps). Product design isn’t just about making things look good, it’s about making features and buttons genuinely useful.
+
+On to the next one!
