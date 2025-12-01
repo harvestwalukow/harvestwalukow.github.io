@@ -90,7 +90,7 @@ export default function Home() {
         </h2>
         <p className="mt-4 text-gray-300">
           I am a student majoring in Data Science Technology at Airlangga
-          University. Learning and building Data/AI/ML stuffs.
+          University. Learning and building data/AI/ML stuffs.
         </p>
       </section>
 
