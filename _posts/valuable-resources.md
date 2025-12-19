@@ -18,3 +18,11 @@ date: "2025-11-03"
 [Extraordinary.com](https://extraordinary.com/directory)
 
 [Wander](https://www.wander.com/)
+
+[Yeezy](https://yeezy.com/)
+
+[OpenAI Supply Co.](https://supply.openai.com/)
+
+[Cluely](https://cluely.us/)
+
+[Woka](https://woka.world/)
