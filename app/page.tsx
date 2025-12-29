@@ -24,6 +24,7 @@ import {
   SiMysql,
   SiGo,
 } from "react-icons/si";
+import { GitHubCalendar } from "react-github-calendar";
 
 export default function Home() {
   return (
@@ -222,6 +223,27 @@ export default function Home() {
               View on GitHub
             </a>
           </div>
+
+          <div className="border border-gray-800 rounded-lg p-6 hover:border-gray-700 transition-colors flex flex-col">
+            <h3 className="text-lg font-semibold text-white">Woka World</h3>
+            <p className="text-gray-400 text-sm mt-2 flex-grow">
+              My clothing brand. Designing and building streetwear with purpose.
+            </p>
+            <div className="flex gap-2 mt-3 flex-wrap">
+              <div className="tooltip-wrapper">
+                <SiReact className="h-5 w-5 text-gray-400 hover:text-white transition-colors cursor-pointer" />
+                <span className="tooltip">React</span>
+              </div>
+            </div>
+            <a
+              href="https://woka.world"
+              target="_blank"
+              rel="noopener"
+              className="inline-block mt-4 px-4 py-2 bg-white text-black rounded-md hover:bg-gray-200 transition-colors text-sm font-medium text-center"
+            >
+              Visit project
+            </a>
+          </div>
         </div>
 
         <div className="mt-6 text-center">
@@ -231,6 +253,24 @@ export default function Home() {
           >
             See all projects
           </Link>
+        </div>
+      </section>
+
+      <section className="mt-10">
+        <h2 className="text-xs font-semibold tracking-widest text-gray-500 uppercase">
+          GitHub Activity
+        </h2>
+        <div className="mt-4 overflow-hidden">
+          <GitHubCalendar
+            username="harvestwalukow"
+            colorScheme="dark"
+            fontSize={10}
+            blockSize={8}
+            blockMargin={2}
+            theme={{
+              dark: ['#1a1a1a', '#3a3a3a', '#6b6b6b', '#a3a3a3', '#ffffff']
+            }}
+          />
         </div>
       </section>
     </div>

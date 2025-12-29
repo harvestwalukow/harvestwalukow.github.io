@@ -123,6 +123,12 @@ const projects = [
     url: "https://inside.beasiswamahaghora.com",
     category: "web/app",
   },
+  {
+    title: "Woka World",
+    description: "My clothing brand. Designing and building streetwear with purpose.",
+    url: "https://woka.world",
+    category: "web/app",
+  },
 ];
 
 export default function ProjectsPage() {
