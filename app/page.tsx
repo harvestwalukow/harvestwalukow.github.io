@@ -227,7 +227,7 @@ export default function Home() {
           <div className="border border-gray-800 rounded-lg p-6 hover:border-gray-700 transition-colors flex flex-col">
             <h3 className="text-lg font-semibold text-white">Woka World</h3>
             <p className="text-gray-400 text-sm mt-2 flex-grow">
-              My clothing brand. Designing and building streetwear with purpose.
+              My clothing brand.
             </p>
             <div className="flex gap-2 mt-3 flex-wrap">
               <div className="tooltip-wrapper">

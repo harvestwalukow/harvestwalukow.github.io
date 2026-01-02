@@ -125,7 +125,7 @@ const projects = [
   },
   {
     title: "Woka World",
-    description: "My clothing brand. Designing and building streetwear with purpose.",
+    description: "My clothing brand.",
     url: "https://woka.world",
     category: "web/app",
   },
