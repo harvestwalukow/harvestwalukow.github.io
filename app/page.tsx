@@ -148,6 +148,18 @@ export default function Home() {
         <h2 className="text-xs font-semibold tracking-widest text-gray-500 uppercase">
           Featured Work
         </h2>
+        <p className="mt-2 text-sm text-gray-400">
+          Check out my{" "}
+          <a
+            href="https://github.com/harvestwalukow"
+            target="_blank"
+            rel="noopener"
+            className="text-white hover:text-gray-400 underline underline-offset-4 transition-colors"
+          >
+            GitHub
+          </a>{" "}
+          for the most updated list of my projects.
+        </p>
         <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="border border-gray-800 rounded-lg p-6 hover:border-gray-700 transition-colors flex flex-col">
             <h3 className="text-lg font-semibold text-white">BMHG AI</h3>
