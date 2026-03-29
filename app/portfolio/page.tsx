@@ -13,50 +13,50 @@ const portfolioItems = [
   {
     title: "Payment Gateway Dashboard",
     description: "2026",
-    image: "/portfolio/payment.png",
+    image: "/portfolio/payment.webp",
     color: "bg-[#818CF8]",
   },
   {
     title: "Shopee Login Page Redesign",
     description: "2026",
-    image: "/portfolio/shopee.png",
+    image: "/portfolio/shopee.webp",
   },
   {
     title: "Astro",
     description: "2026",
-    image: "/portfolio/astro.png",
+    image: "/portfolio/astro.webp",
     link: "https://contra.com/vesko_design_84f3r73z/work",
     color: "bg-[#f5f5f5]",
   },
   {
     title: "Login Page",
     description: "2026",
-    image: "/portfolio/j.png",
+    image: "/portfolio/j.webp",
     color: "bg-[#FCFFCC]",
   },
   {
     title: "10 Product Designs in 10 Days",
     description: "2025",
-    image: "/portfolio/10.png",
+    image: "/portfolio/10.webp",
     link: "https://harvestwalukow.vercel.app/blog/10-product-designs-10-days",
   },
   {
     title: "Brawn GP Redesign",
     description: "2021",
-    image: "/portfolio/brawn-gp.png",
+    image: "/portfolio/brawn-gp.webp",
     link: "https://www.behance.net/gallery/125780041/Brawn-GP-Logo-Livery-Redesign",
   },
   {
     title: "Brainly Redesign",
     description: "2021",
-    image: "/portfolio/brainly.png",
+    image: "/portfolio/brainly.webp",
     link: "https://www.behance.net/gallery/126265483/Brainly-New-Look-Logo-UI",
     imagePadding: "p-48", // Very small to ensure crispness
   },
   {
     title: "Social Media @ngobrolmatematika",
     description: "2025",
-    image: "/portfolio/ngotik.png",
+    image: "/portfolio/ngotik.webp",
     link: "https://www.instagram.com/ngobrolmatematika",
   },
   {
