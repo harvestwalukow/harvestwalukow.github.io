@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import localFont from "next/font/local";
-import { MessageCircle, ExternalLink } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
 const largeRoman = localFont({
@@ -90,7 +90,16 @@ const portfolioItems = [
   },
 ];
 
-function PortfolioItem({ item, index }: { item: any; index: number }) {
+interface PortfolioItemData {
+  title: string;
+  description: string;
+  image: string;
+  link?: string;
+  color?: string;
+  imagePadding?: string;
+}
+
+function PortfolioItem({ item, index }: { item: PortfolioItemData; index: number }) {
   const [isFocused, setIsFocused] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 

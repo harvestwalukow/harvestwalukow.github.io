@@ -3,17 +3,11 @@
 import localFont from "next/font/local";
 import Link from "next/link";
 import { Mail, Linkedin, Github, Youtube, Calendar } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import {
   SiPython,
   SiReact,
-  SiOpenai,
-  SiNextdotjs,
-  SiTypescript,
   SiPytorch,
   SiSqlite,
-  SiMysql,
-  SiGo,
 } from "react-icons/si";
 import { GitHubCalendar } from "react-github-calendar";
 
