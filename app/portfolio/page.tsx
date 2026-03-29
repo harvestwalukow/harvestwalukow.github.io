@@ -62,31 +62,31 @@ const portfolioItems = [
   {
     title: "Social Media @beasiswamahaghora Scholarship Opening",
     description: "2023",
-    image: "/portfolio/bmhg.png",
+    image: "/portfolio/bmhg.webp",
     link: "https://www.instagram.com/beasiswamahaghora",
   },
   {
     title: "Social Media @beasiswamahaghora",
     description: "2024",
-    image: "/portfolio/bmhg1.png",
+    image: "/portfolio/bmhg1.webp",
     link: "https://www.instagram.com/beasiswamahaghora",
   },
   {
     title: "Woka T-shirt Collection",
     description: "2025",
-    image: "/portfolio/woka.png",
+    image: "/portfolio/woka.webp",
     link: "https://www.instagram.com/woka.wrld/",
   },
   {
     title: "Founders Fund Data Visualization",
     description: "2024",
-    image: "/portfolio/ff.png",
+    image: "/portfolio/ff.webp",
     link: "https://github.com/harvestwalukow/founders-fund",
   },
   {
     title: "3D Custom Ice Cream Cup",
     description: "2025",
-    image: "/portfolio/3d.png",
+    image: "/portfolio/3d.webp",
   },
 ];
 
