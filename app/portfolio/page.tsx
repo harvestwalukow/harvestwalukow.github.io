@@ -51,7 +51,7 @@ const portfolioItems = [
     description: "2021",
     image: "/portfolio/brainly.webp",
     link: "https://www.behance.net/gallery/126265483/Brainly-New-Look-Logo-UI",
-    imagePadding: "p-48", // Very small to ensure crispness
+    imagePadding: "p-24 md:p-48", // Even smaller on mobile, still fits
   },
   {
     title: "Social Media @ngobrolmatematika",
