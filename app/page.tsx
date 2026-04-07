@@ -83,6 +83,18 @@ export default function Home() {
           University. Learning and building data/AI/ML stuffs.
         </p>
       </section>
+
+      <section className="mt-10">
+        <h2 className={`${largeRoman.className} text-lg lowercase text-white`}>
+          resume
+        </h2>
+        <Link
+          href="/resume"
+          className="inline-block mt-1 text-gray-400 hover:text-white underline underline-offset-4 transition-colors"
+        >
+          View resume
+        </Link>
+      </section>
       <section className="mt-10">
         <h2 className={`${largeRoman.className} text-lg lowercase text-white`}>
           graphic design portfolio
