@@ -10,6 +10,7 @@ import {
   SiSqlite,
 } from "react-icons/si";
 import { GitHubCalendar } from "react-github-calendar";
+import AgeCounter from "@/components/AgeCounter";
 
 const largeRoman = localFont({
   src: "../components/Large-Roman.otf",
@@ -73,6 +74,8 @@ export default function Home() {
           </a>
         </div>
       </section>
+
+      <AgeCounter />
 
       <section className="mt-10">
         <h2 className={`${largeRoman.className} text-lg lowercase text-white`}>
