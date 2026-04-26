@@ -1,8 +1,9 @@
 "use client";
+import { useState, useEffect } from "react";
 
 import localFont from "next/font/local";
 import Link from "next/link";
-import { Mail, Linkedin, Github, Youtube, Calendar } from "lucide-react";
+import { Mail, Linkedin, Github, Youtube, Calendar, ChevronDown } from "lucide-react";
 import {
   SiPython,
   SiReact,
@@ -10,13 +11,31 @@ import {
   SiSqlite,
 } from "react-icons/si";
 import { GitHubCalendar } from "react-github-calendar";
+
 import AgeCounter from "@/components/AgeCounter";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+
+import LeetCodeCalendar from "@/components/LeetCodeCalendar";
+
+
 
 const largeRoman = localFont({
   src: "../components/Large-Roman.otf",
 });
 
 export default function Home() {
+  const [activityType, setActivityType] = useState<"github" | "leetcode">("github");
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   return (
     <div className="max-w-xl mx-auto px-5 py-16">
       <section className="text-center">
@@ -236,20 +255,59 @@ export default function Home() {
       </section>
 
       <section className="mt-10">
-        <h2 className={`${largeRoman.className} text-lg lowercase text-white`}>
-          github activity
-        </h2>
+        <DropdownMenu>
+          <DropdownMenuTrigger asChild>
+            <button className="flex items-center gap-1.5 group cursor-pointer outline-none">
+              <h2 className={`${largeRoman.className} text-lg lowercase text-white`}>
+                {activityType} activity
+              </h2>
+              <ChevronDown 
+                className="h-4 w-4 text-gray-400 group-hover:text-white transition-colors"
+                style={{ marginTop: '-1px' }}
+              />
+            </button>
+          </DropdownMenuTrigger>
+          <DropdownMenuContent align="start" className="bg-[#0a0a0a] border-[#1a1a1a]">
+            <DropdownMenuItem 
+              onClick={() => setActivityType("github")}
+              className={`cursor-pointer ${activityType === "github" ? "bg-[#1a1a1a] text-white" : "text-gray-400 focus:bg-[#1a1a1a] focus:text-white"}`}
+            >
+              github activity
+            </DropdownMenuItem>
+            <DropdownMenuItem 
+              onClick={() => setActivityType("leetcode")}
+              className={`cursor-pointer ${activityType === "leetcode" ? "bg-[#1a1a1a] text-white" : "text-gray-400 focus:bg-[#1a1a1a] focus:text-white"}`}
+            >
+              leetcode activity
+            </DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
+        
         <div className="mt-1 overflow-hidden">
-          <GitHubCalendar
-            username="harvestwalukow"
-            colorScheme="dark"
-            fontSize={10}
-            blockSize={8}
-            blockMargin={2}
-            theme={{
-              dark: ['#1a1a1a', '#3a3a3a', '#6b6b6b', '#a3a3a3', '#ffffff']
-            }}
-          />
+          {mounted && (
+            activityType === "github" ? (
+              <GitHubCalendar
+                username="harvestwalukow"
+                colorScheme="dark"
+                fontSize={10}
+                blockSize={8}
+                blockMargin={2}
+                theme={{
+                  dark: ['#1a1a1a', '#3a3a3a', '#6b6b6b', '#a3a3a3', '#ffffff']
+                }}
+              />
+            ) : (
+              <LeetCodeCalendar
+                username="harvestwalukow"
+                blockSize={8}
+                blockMargin={2}
+                fontSize={10}
+                theme={{
+                  dark: ['#1a1a1a', '#3a3a3a', '#6b6b6b', '#a3a3a3', '#ffffff']
+                }}
+              />
+            )
+          )}
         </div>
       </section>
     </div>
