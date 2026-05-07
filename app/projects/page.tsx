@@ -134,6 +134,18 @@ const projects = [
     category: "ds/ai/ml",
   },
   {
+    title: "JPTSquad",
+    description: "Event management platform.",
+    url: "https://jptsquad.com",
+    category: "web/app",
+  },
+  {
+    title: "hr.esgi.ai",
+    description: "HR website for CESGS.",
+    url: "https://hr.esgi.ai",
+    category: "web/app",
+  },
+  {
     title: "Woka World",
     description: "My clothing brand.",
     url: "https://woka.world",
