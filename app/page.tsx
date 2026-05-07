@@ -148,10 +148,34 @@ export default function Home() {
         </p>
         <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="border border-gray-800 rounded-lg p-6 hover:border-gray-700 transition-colors flex flex-col">
+            <h3 className="text-lg font-semibold text-white">DoggoGAN</h3>
+            <p className="text-gray-400 text-sm mt-2 flex-grow">
+              From-scratch Generative Adversarial Networks for dog image synthesis.
+            </p>
+            <div className="flex gap-2 mt-3 flex-wrap">
+              <div className="tooltip-wrapper">
+                <SiPython className="h-5 w-5 text-gray-400 hover:text-white transition-colors cursor-pointer" />
+                <span className="tooltip">Python</span>
+              </div>
+              <div className="tooltip-wrapper">
+                <SiPytorch className="h-5 w-5 text-gray-400 hover:text-white transition-colors cursor-pointer" />
+                <span className="tooltip">PyTorch</span>
+              </div>
+            </div>
+            <a
+              href="https://github.com/harvestwalukow/DoggoGAN"
+              target="_blank"
+              rel="noopener"
+              className="inline-block mt-4 px-4 py-2 bg-white text-black rounded-md hover:bg-gray-200 transition-colors text-sm font-medium text-center"
+            >
+              View on GitHub
+            </a>
+          </div>
+
+          <div className="border border-gray-800 rounded-lg p-6 hover:border-gray-700 transition-colors flex flex-col">
             <h3 className="text-lg font-semibold text-white">BMHG AI</h3>
             <p className="text-gray-400 text-sm mt-2 flex-grow">
-              AI chatbot answering questions about the Mahaghora Scholarship
-              program.
+              An AI-powered chatbot built with Retrieval Augmented Generation.
             </p>
             <div className="flex gap-2 mt-3 flex-wrap">
               <div className="tooltip-wrapper">
@@ -175,11 +199,11 @@ export default function Home() {
 
           <div className="border border-gray-800 rounded-lg p-6 hover:border-gray-700 transition-colors flex flex-col">
             <h3 className="text-lg font-semibold text-white">
-              GPT From Scratch
+              Diffusion Maze Solver
             </h3>
             <p className="text-gray-400 text-sm mt-2 flex-grow">
-              Building my own GPT based on the famous paper Attention Is All You
-              Need.
+              Conditional Denoising Diffusion Probabilistic Models for maze
+              solving.
             </p>
             <div className="flex gap-2 mt-3 flex-wrap">
               <div className="tooltip-wrapper">
@@ -192,54 +216,12 @@ export default function Home() {
               </div>
             </div>
             <a
-              href="https://harvestwalukow.github.io/gpt/"
-              target="_blank"
-              rel="noopener"
-              className="inline-block mt-4 px-4 py-2 bg-white text-black rounded-md hover:bg-gray-200 transition-colors text-sm font-medium text-center"
-            >
-              View project
-            </a>
-          </div>
-
-          <div className="border border-gray-800 rounded-lg p-6 hover:border-gray-700 transition-colors flex flex-col">
-            <h3 className="text-lg font-semibold text-white">Apple Music DB</h3>
-            <p className="text-gray-400 text-sm mt-2 flex-grow">
-              Relational database modeling.
-            </p>
-            <div className="flex gap-2 mt-3 flex-wrap">
-              <div className="tooltip-wrapper">
-                <SiSqlite className="h-5 w-5 text-gray-400 hover:text-white transition-colors cursor-pointer" />
-                <span className="tooltip">SQL</span>
-              </div>
-            </div>
-            <a
-              href="https://github.com/harvestwalukow/apple-music"
+              href="https://github.com/harvestwalukow/maze"
               target="_blank"
               rel="noopener"
               className="inline-block mt-4 px-4 py-2 bg-white text-black rounded-md hover:bg-gray-200 transition-colors text-sm font-medium text-center"
             >
               View on GitHub
-            </a>
-          </div>
-
-          <div className="border border-gray-800 rounded-lg p-6 hover:border-gray-700 transition-colors flex flex-col">
-            <h3 className="text-lg font-semibold text-white">Woka World</h3>
-            <p className="text-gray-400 text-sm mt-2 flex-grow">
-              My clothing brand.
-            </p>
-            <div className="flex gap-2 mt-3 flex-wrap">
-              <div className="tooltip-wrapper">
-                <SiReact className="h-5 w-5 text-gray-400 hover:text-white transition-colors cursor-pointer" />
-                <span className="tooltip">React</span>
-              </div>
-            </div>
-            <a
-              href="https://woka.world"
-              target="_blank"
-              rel="noopener"
-              className="inline-block mt-4 px-4 py-2 bg-white text-black rounded-md hover:bg-gray-200 transition-colors text-sm font-medium text-center"
-            >
-              Visit project
             </a>
           </div>
         </div>

@@ -5,8 +5,7 @@ import { useState } from "react";
 const projects = [
   {
     title: "BMHG AI",
-    description:
-      "AI chatbot answering questions about the Mahaghora Scholarship program.",
+    description: "An AI-powered chatbot built with Retrieval Augmented Generation.",
     url: "https://tanya.beasiswamahaghora.com",
     category: "ds/ai/ml",
   },
@@ -121,6 +120,18 @@ const projects = [
     description: "Internal tool for the Mahaghora Scholarship organization.",
     url: "https://inside.beasiswamahaghora.com",
     category: "web/app",
+  },
+  {
+    title: "DoggoGAN",
+    description: "From-scratch Generative Adversarial Networks for dog image synthesis.",
+    url: "https://github.com/harvestwalukow/DoggoGAN",
+    category: "ds/ai/ml",
+  },
+  {
+    title: "Diffusion Maze Solver",
+    description: "Conditional Denoising Diffusion Probabilistic Models for maze solving.",
+    url: "https://github.com/harvestwalukow/maze",
+    category: "ds/ai/ml",
   },
   {
     title: "Woka World",
