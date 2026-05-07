@@ -22,6 +22,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              if (window.location.hostname === 'harvestwalukow.github.io') {
+                window.location.href = 'https://harvestwalukow.vercel.app' + window.location.pathname + window.location.search;
+              }
+            `,
+          }}
+        />
+      </head>
       <body className={inter.className}>{children}</body>
     </html>
   );
