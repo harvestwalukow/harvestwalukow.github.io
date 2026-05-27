@@ -30,3 +30,5 @@ date: "2025-11-03"
 [Get Ahead](https://youtu.be/gx_YiyVCpDY?si=aOtqIcMCD_Pk6Taf)
 
 [Ryo Lu](https://ryo.lu/)
+
+[Laid off Atlassian guy](https://youtu.be/55pTFVoclvE?si=MYT96bgW6xTSiUr2)
