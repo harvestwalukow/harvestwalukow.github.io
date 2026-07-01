@@ -32,3 +32,5 @@ date: "2025-11-03"
 [Ryo Lu](https://ryo.lu/)
 
 [Laid off Atlassian guy](https://youtu.be/55pTFVoclvE?si=MYT96bgW6xTSiUr2)
+
+[Gojek Engineer Blog](https://medium.com/gojekengineering)
