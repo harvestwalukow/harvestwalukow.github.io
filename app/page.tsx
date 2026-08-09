@@ -102,7 +102,8 @@ export default function Home() {
         </h2>
         <p className="mt-1 text-gray-400">
           I am a student majoring in Data Science Technology at Airlangga
-          University. Learning and building data/AI/ML stuffs.
+          University. Learning and building data/AI/ML stuffs, including
+          building ayam.lat.
         </p>
       </section>
 
@@ -147,6 +148,31 @@ export default function Home() {
           for the most updated list of my projects.
         </p>
         <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="border border-gray-800 rounded-lg p-6 hover:border-gray-700 transition-colors flex flex-col">
+            <h3 className="text-lg font-semibold text-white">Ayam AI</h3>
+            <p className="text-gray-400 text-sm mt-2 flex-grow">
+              An AI project focused on building ayam.lat.
+            </p>
+            <div className="flex gap-2 mt-3 flex-wrap">
+              <div className="tooltip-wrapper">
+                <SiPython className="h-5 w-5 text-gray-400 hover:text-white transition-colors cursor-pointer" />
+                <span className="tooltip">Python</span>
+              </div>
+              <div className="tooltip-wrapper">
+                <SiReact className="h-5 w-5 text-gray-400 hover:text-white transition-colors cursor-pointer" />
+                <span className="tooltip">React</span>
+              </div>
+            </div>
+            <a
+              href="https://ayam.lat"
+              target="_blank"
+              rel="noopener"
+              className="inline-block mt-4 px-4 py-2 bg-white text-black rounded-md hover:bg-gray-200 transition-colors text-sm font-medium text-center"
+            >
+              Visit project
+            </a>
+          </div>
+
           <div className="border border-gray-800 rounded-lg p-6 hover:border-gray-700 transition-colors flex flex-col">
             <h3 className="text-lg font-semibold text-white">DoggoGAN</h3>
             <p className="text-gray-400 text-sm mt-2 flex-grow">
