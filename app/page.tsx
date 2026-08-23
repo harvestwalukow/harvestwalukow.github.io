@@ -102,8 +102,7 @@ export default function Home() {
         </h2>
         <p className="mt-1 text-gray-400">
           I am a student majoring in Data Science Technology at Airlangga
-          University. Learning and building data/AI/ML stuffs, including
-          building ayam.lat.
+          University. Learning and building data/AI/ML stuffs.
         </p>
       </section>
 
@@ -316,6 +315,30 @@ export default function Home() {
               />
             )
           )}
+        </div>
+      </section>
+
+      <section className="mt-10">
+        <h2 className={`${largeRoman.className} text-lg lowercase text-white`}>
+          tools
+        </h2>
+        <div className="mt-1 flex flex-col items-start gap-1">
+          <a
+            href="https://not-notes.vercel.app/"
+            target="_blank"
+            rel="noopener"
+            className="text-gray-400 hover:text-white underline underline-offset-4 transition-colors"
+          >
+            Not Apple Notes
+          </a>
+          <a
+            href="https://seemessi.vercel.app/"
+            target="_blank"
+            rel="noopener"
+            className="text-gray-400 hover:text-white underline underline-offset-4 transition-colors"
+          >
+            Add Messi to my calendar
+          </a>
         </div>
       </section>
     </div>
