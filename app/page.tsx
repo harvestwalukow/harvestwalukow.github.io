@@ -1,7 +1,9 @@
 "use client";
 import { useState, useEffect } from "react";
+import type { CSSProperties } from "react";
 
 import localFont from "next/font/local";
+import Image from "next/image";
 import Link from "next/link";
 import { Mail, Linkedin, Github, Youtube, Calendar, ChevronDown } from "lucide-react";
 import {
@@ -27,6 +29,30 @@ import LeetCodeCalendar from "@/components/LeetCodeCalendar";
 const largeRoman = localFont({
   src: "../components/Large-Roman.otf",
 });
+
+const books = [
+  { title: "The Subtle Art of Not Giving a F*ck", cover: "/bookshelf/subtle-art.jpg", width: 527, height: 800 },
+  { title: "Outliers", cover: "/bookshelf/outliers.png", width: 265, height: 380 },
+  { title: "On Writing", cover: "/bookshelf/on-writing.png", width: 265, height: 380 },
+  { title: "Atomic Habits", cover: "/bookshelf/atomic-habits-flat.jpg", width: 1200, height: 1800 },
+  { title: "Srimenanti", cover: "/bookshelf/srimenanti.jpg", width: 1588, height: 2362 },
+  { title: "Perjamuan Khong Guan", cover: "/bookshelf/perjamuan-khong-guan-user.png", width: 500, height: 695 },
+  { title: "Surat Kopi", cover: "/bookshelf/surat-kopi.jpg", width: 1184, height: 1754 },
+  { title: "Nanti Kita Sambat Tentang Hari Ini", cover: "/bookshelf/nanti-kita-sambat.jpg", width: 600, height: 890 },
+  { title: "Nanti Kita Cerita Tentang Hari Ini", cover: "/bookshelf/nanti-kita-cerita-flat.jpg", width: 400, height: 516 },
+  { title: "Geez & Ann", cover: "/bookshelf/geez-ann.jpg", width: 650, height: 921 },
+  { title: "Timun Jelita", cover: "/bookshelf/timun-jelita-flat.jpg", width: 1221, height: 1787 },
+  { title: "Mantappu Jiwa", cover: "/bookshelf/mantappu-jiwa.jpg", width: 1598, height: 2357 },
+  { title: "Mimpi Sejuta Dolar", cover: "/bookshelf/mimpi-sejuta-dolar-flat.jpg", width: 700, height: 955 },
+  { title: "Seperti Dendam, Rindu Harus Dibayar Tuntas", cover: "/bookshelf/seperti-dendam.jpg", width: 760, height: 1139 },
+] as const;
+
+const films = [
+  ["The Social Network", "/films/the-social-network.png"],
+  ["Knives Out", "/films/knives-out.png"],
+  ["La La Land", "/films/la-la-land.png"],
+  ["Hustle", "/films/hustle.png"],
+] as const;
 
 export default function Home() {
   const [activityType, setActivityType] = useState<"github" | "leetcode">("github");
@@ -315,6 +341,78 @@ export default function Home() {
               />
             )
           )}
+        </div>
+      </section>
+
+      <section className="mt-10" aria-labelledby="bookshelf-heading">
+        <h2
+          id="bookshelf-heading"
+          className={`${largeRoman.className} text-lg lowercase text-white`}
+        >
+          bookshelf
+        </h2>
+
+        <div className="relative mt-0 flex h-[clamp(5.5rem,20vw,7rem)] items-end justify-between overflow-visible px-0">
+          {books.map(({ title, cover, width, height }, index) => (
+            <button
+              key={title}
+              type="button"
+              aria-label={title}
+              className="group relative -ml-[clamp(1.5rem,4vw,2rem)] z-[var(--book-layer)] h-full w-[clamp(2.25rem,9vw,4rem)] shrink-0 cursor-pointer rounded-sm border border-white/10 bg-[#111111] p-0.5 shadow-[0_10px_24px_rgba(0,0,0,0.4)] outline-none transition-[z-index] duration-300 first:ml-0 hover:z-50 focus-visible:z-50"
+              style={{ "--book-layer": index + 1 } as CSSProperties}
+            >
+              <Image
+                src={cover}
+                alt=""
+                width={width}
+                height={height}
+                className="h-full w-full rounded-[1px] object-cover"
+              />
+              <span className="pointer-events-none absolute bottom-0 left-1/2 z-10 w-32 -translate-x-1/2 translate-y-2 scale-90 opacity-0 transition-[opacity,transform] duration-200 group-hover:-translate-y-2 group-hover:scale-100 group-hover:opacity-100 group-focus-visible:-translate-y-2 group-focus-visible:scale-100 group-focus-visible:opacity-100">
+                <Image
+                  src={cover}
+                  alt=""
+                  width={width}
+                  height={height}
+                  className="h-auto w-full rounded-sm border border-white/20 object-contain shadow-[0_12px_30px_rgba(0,0,0,0.55)]"
+                />
+              </span>
+            </button>
+          ))}
+        </div>
+      </section>
+
+      <section className="mt-10" aria-labelledby="films-heading">
+        <h2
+          id="films-heading"
+          className={`${largeRoman.className} text-lg lowercase text-white`}
+        >
+          films
+        </h2>
+        <p className="mt-1 text-sm text-gray-400">
+          Check out my{" "}
+          <a
+            href="https://boxd.it/iHDeP"
+            target="_blank"
+            rel="noopener"
+            className="underline underline-offset-4 transition-colors hover:text-white"
+          >
+            Letterboxd
+          </a>
+          {" "}for more of my favorite films.
+        </p>
+        <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-4">
+          {films.map(([title, poster]) => (
+            <figure key={title} className="overflow-hidden rounded-md border border-gray-800">
+              <Image
+                src={poster}
+                alt={title}
+                width={400}
+                height={600}
+                className="aspect-[2/3] h-auto w-full object-cover"
+              />
+            </figure>
+          ))}
         </div>
       </section>
 
