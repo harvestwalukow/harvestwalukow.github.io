@@ -1,5 +1,5 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import type { CSSProperties } from "react";
 
 import localFont from "next/font/local";
@@ -10,7 +10,6 @@ import {
   SiPython,
   SiReact,
   SiPytorch,
-  SiSqlite,
 } from "react-icons/si";
 import { GitHubCalendar } from "react-github-calendar";
 
@@ -57,9 +56,29 @@ const films = [
 export default function Home() {
   const [activityType, setActivityType] = useState<"github" | "leetcode">("github");
   const [mounted, setMounted] = useState(false);
+  const [selectedBook, setSelectedBook] = useState<string | null>(null);
+  const bookshelfRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setMounted(true);
+  }, []);
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent | TouchEvent) {
+      if (
+        bookshelfRef.current &&
+        !bookshelfRef.current.contains(event.target as Node)
+      ) {
+        setSelectedBook(null);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("touchstart", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("touchstart", handleClickOutside);
+    };
   }, []);
 
   return (
@@ -352,33 +371,48 @@ export default function Home() {
           bookshelf
         </h2>
 
-        <div className="relative mt-0 flex h-[clamp(5.5rem,20vw,7rem)] items-end justify-between overflow-visible px-0">
-          {books.map(({ title, cover, width, height }, index) => (
-            <button
-              key={title}
-              type="button"
-              aria-label={title}
-              className="group relative -ml-[clamp(1.5rem,4vw,2rem)] z-[var(--book-layer)] h-full w-[clamp(2.25rem,9vw,4rem)] shrink-0 cursor-pointer rounded-sm border border-white/10 bg-[#111111] p-0.5 shadow-[0_10px_24px_rgba(0,0,0,0.4)] outline-none transition-[z-index] duration-300 first:ml-0 hover:z-50 focus-visible:z-50"
-              style={{ "--book-layer": index + 1 } as CSSProperties}
-            >
-              <Image
-                src={cover}
-                alt=""
-                width={width}
-                height={height}
-                className="h-full w-full rounded-[1px] object-cover"
-              />
-              <span className="pointer-events-none absolute bottom-0 left-1/2 z-10 w-32 -translate-x-1/2 translate-y-2 scale-90 opacity-0 transition-[opacity,transform] duration-200 group-hover:-translate-y-2 group-hover:scale-100 group-hover:opacity-100 group-focus-visible:-translate-y-2 group-focus-visible:scale-100 group-focus-visible:opacity-100">
+        <div
+          ref={bookshelfRef}
+          className="relative mt-0 flex h-[clamp(5.5rem,20vw,7rem)] items-end justify-between overflow-visible px-0"
+        >
+          {books.map(({ title, cover, width, height }, index) => {
+            const isSelected = selectedBook === title;
+            return (
+              <button
+                key={title}
+                type="button"
+                aria-label={title}
+                onClick={() => setSelectedBook((prev) => (prev === title ? null : title))}
+                className={`group relative -ml-[clamp(1.5rem,4vw,2rem)] h-full w-[clamp(2.25rem,9vw,4rem)] shrink-0 cursor-pointer rounded-sm border border-white/10 bg-[#111111] p-0.5 shadow-[0_10px_24px_rgba(0,0,0,0.4)] outline-none transition-[z-index] duration-300 first:ml-0 hover:z-50 focus-visible:z-50 ${
+                  isSelected ? "z-50" : "z-[var(--book-layer)]"
+                }`}
+                style={{ "--book-layer": index + 1 } as CSSProperties}
+              >
                 <Image
                   src={cover}
                   alt=""
                   width={width}
                   height={height}
-                  className="h-auto w-full rounded-sm border border-white/20 object-contain shadow-[0_12px_30px_rgba(0,0,0,0.55)]"
+                  className="h-full w-full rounded-[1px] object-cover"
                 />
-              </span>
-            </button>
-          ))}
+                <span
+                  className={`pointer-events-none absolute bottom-0 left-1/2 z-10 w-32 -translate-x-1/2 transition-[opacity,transform] duration-200 group-hover:-translate-y-2 group-hover:scale-100 group-hover:opacity-100 group-focus-visible:-translate-y-2 group-focus-visible:scale-100 group-focus-visible:opacity-100 ${
+                    isSelected
+                      ? "-translate-y-2 scale-100 opacity-100"
+                      : "translate-y-2 scale-90 opacity-0"
+                  }`}
+                >
+                  <Image
+                    src={cover}
+                    alt=""
+                    width={width}
+                    height={height}
+                    className="h-auto w-full rounded-sm border border-white/20 object-contain shadow-[0_12px_30px_rgba(0,0,0,0.55)]"
+                  />
+                </span>
+              </button>
+            );
+          })}
         </div>
       </section>
 
