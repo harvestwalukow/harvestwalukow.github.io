@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-const BIRTH_DATE = new Date("2005-08-29T00:00:00");
+const BIRTH_DATE = new Date(2005, 7, 29);
 const LIFE_EXPECTANCY = 80;
 
 export default function AgeCounter() {
@@ -12,9 +12,34 @@ export default function AgeCounter() {
   useEffect(() => {
     const updateAge = () => {
       const now = new Date();
-      const diff = now.getTime() - BIRTH_DATE.getTime();
-      // Using a precise tropical year in milliseconds
-      const ageInYears = diff / (1000 * 60 * 60 * 24 * 365.242199);
+
+      const birthdayThisYear = new Date(
+        now.getFullYear(),
+        BIRTH_DATE.getMonth(),
+        BIRTH_DATE.getDate(),
+      );
+      const hasHadBirthday = now >= birthdayThisYear;
+      const age =
+        now.getFullYear() -
+        BIRTH_DATE.getFullYear() -
+        (hasHadBirthday ? 0 : 1);
+      const lastBirthday = hasHadBirthday
+        ? birthdayThisYear
+        : new Date(
+            now.getFullYear() - 1,
+            BIRTH_DATE.getMonth(),
+            BIRTH_DATE.getDate(),
+          );
+      const nextBirthday = new Date(
+        lastBirthday.getFullYear() + 1,
+        BIRTH_DATE.getMonth(),
+        BIRTH_DATE.getDate(),
+      );
+      const yearProgress =
+        (now.getTime() - lastBirthday.getTime()) /
+        (nextBirthday.getTime() - lastBirthday.getTime());
+
+      const ageInYears = age + yearProgress;
       setAge(ageInYears);
     };
 
